@@ -5,6 +5,8 @@
     <!-- Permissions cho benchmark - MacrobenchmarkRule cần permissions này -->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!-- Permission để load ảnh từ internet -->
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"

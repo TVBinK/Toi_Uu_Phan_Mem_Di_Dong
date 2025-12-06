@@ -28,7 +28,7 @@ import kotlinx.coroutines.launch
 fun ScrollScreen() {
     Surface(modifier = Modifier.fillMaxSize()) {
         // ScrollToTop_Unoptimized()
-        ScrollToTop_Optimized()
+        ScrollToTop_Unoptimized()
     }
 }
 //  Phiên bản chưa tối ưu – Recompose liên tục khi cuộn
@@ -39,7 +39,7 @@ fun ScrollToTop_Unoptimized() {
 
     Box(modifier = Modifier.fillMaxSize()) {
         LazyColumn(state = listState) {
-            items(200) { index ->
+            items(500) { index ->
                 Text(
                     text = "Item #$index",
                     modifier = Modifier
@@ -78,7 +78,7 @@ fun ScrollToTop_Optimized() {
 
     Box(modifier = Modifier.fillMaxSize()) {
         LazyColumn(state = listState) {
-            items(200) { index ->
+            items(500) { index ->
                 Text(
                     text = "Item #$index",
                     modifier = Modifier
@@ -113,3 +113,5 @@ fun ScrollToTop_Optimized() {
         }
     }
 }
+
+
